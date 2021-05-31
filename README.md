@@ -7,7 +7,7 @@ Future Features:
   * Chatbot functionality
   * Welcome message on new user appearance in Discord lobby
   * Moderation for foul language
-  * 
+  * Improve description aesthetics/formatting issues
 
 Bot created by: Ryan Hartman
 
