@@ -17,8 +17,12 @@ With some code shamelessly borrowed (with love) from: https://youtu.be/SPTfmiYiu
 
 #### Current Commands:
 !Newest Task - Populates most recent task published to 1729.com
+
 !inspire - Produces random inspirational quote
+
 !Recent Tasks - Populates two most recent tasks published on 1729.com
+
 !Wh%%% - Any message that begins with !Wh will recieve a message detailing the bot's purpose
+
 !README - Produces a link to this README document
 
