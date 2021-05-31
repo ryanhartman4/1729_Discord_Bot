@@ -28,9 +28,11 @@ def Task1():
 
     first_task = first_task[4:].lstrip()
 
-    return first_task
+    first_task = first_task.split('   ',3)
 
-# Creating second task 
+    first_task = first_task[0].strip()
+
+    return first_task
 
 # Creating Second Task 
 def Task2():
@@ -42,11 +44,8 @@ def Task2():
 
     Second_Task = Second_Task[Second_Task.find('Earn',0)+4:].strip()
 
+    Second_Task = Second_Task.split('   ',3)
+
+    Second_Task = Second_Task[0].strip()
+
     return Second_Task
-
-
-
-
-
-
-
