@@ -1,6 +1,8 @@
 # 1729_Discord_Bot
 Discord bot is meant to inform the 1729 community about competitions (and other things) found at 1729. It also has general chatbot capabilities and will do its best to converse with you, should you request it to do so. 
 
+Link to Discord Server: https://discord.gg/7Brt5sVJWH
+
 Bot created by: Ryan Hartman
 
 With some code shamelessly borrowed (with love) from: https://youtu.be/SPTfmiYiuok & https://data-flair.training/blogs/python-chatbot-project/
