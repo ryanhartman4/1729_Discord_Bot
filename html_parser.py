@@ -1,5 +1,9 @@
 # importing libraries
 import re
+import os
+# installing beautifulsoup on virtual system 
+os.system('pip install --upgrade pip')
+os.system('python3 -m pip install beautifulsoup4')
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
@@ -25,6 +29,22 @@ def Task1():
     first_task = first_task[4:].lstrip()
 
     return first_task
+
+# Creating second task 
+
+# Creating Second Task 
+def Task2():
+    First_Earn = text.find('Earn',text.find('Earn',0)+5)
+
+    Second_Earn = text.find('Earn',First_Earn)
+
+    Second_Task = text[text.find('read',Second_Earn)+4:text.find('read',text.find('read',Second_Earn)+4)+4].strip()
+
+    Second_Task = Second_Task[Second_Task.find('Earn',0)+4:].strip()
+
+    return Second_Task
+
+
 
 
 

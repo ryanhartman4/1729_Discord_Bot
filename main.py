@@ -5,7 +5,7 @@ import requests
 import json
 import random
 from replit import db
-from html_parser import Task1
+from html_parser import Task1, Task2
 from keep_alive import keep_alive
 
 # Establishing client
@@ -75,31 +75,31 @@ async def on_message(message):
         if any(word in msg for word in sad_words):
             await message.channel.send(random.choice(options))
 
-    # Adds new encouragements to database
-    if msg.startswith('!new'):
-        encouraging_message = msg.split("!new ",1)[1]
-        update_encouragements(encouraging_message)
-        await message.channel.send('Your encouraging message has been added')
-    
-    # deletes encouragemnets based off of indices within database
-    if msg.startswith('!del'):
-        encouragements = []
-        if "encouragements" in db.keys():
-            index = int(msg.split('!del',1)[1])
-            delete_encouragement(index)
-            encouragements = db['encouragements']
-            await message.channel.send(encouragements)
-        else: 
-            await message.channel.send('There is nothing to delete!')
+        # Adds new encouragements to database
+        if msg.startswith('!new'):
+            encouraging_message = msg.split("!new ",1)[1]
+            update_encouragements(encouraging_message)
+            await message.channel.send('Your encouraging message has been added')
+        
+        # deletes encouragemnets based off of indices within database
+        if msg.startswith('!del'):
+            encouragements = []
+            if "encouragements" in db.keys():
+                index = int(msg.split('!del',1)[1])
+                delete_encouragement(index)
+                encouragements = db['encouragements']
+                await message.channel.send(encouragements)
+            else: 
+                await message.channel.send('There is nothing to delete!')
 
-    # List of encouragements available in database
-    if msg.startswith('!list'):
-        encouragements = []
-        if 'encouragements' in db.keys():
-            encouragements = db['encouragements']
-            await message.channel.send(encouragements)
-        else: 
-            await message.channel.send('The list is empty!')
+            # List of encouragements available in database
+            if msg.startswith('!list'):
+                encouragements = []
+                if 'encouragements' in db.keys():
+                    encouragements = db['encouragements']
+                    await message.channel.send(encouragements)
+                else: 
+                    await message.channel.send('The list is empty!')
     
     # Turns the bot on and off
     if msg.startswith('!responding'):
@@ -116,16 +116,24 @@ async def on_message(message):
     # Responds with newest 'earn' task available on 1729.com        
     if msg.startswith('!Newest Task'):
         await message.channel.send(Task1())
+        await message.channel.send('https://1729.com/all/')
 
     # Responds with description of bot
-    if msg.startswith('!Who are you?'):
-        await message.channel.send('Hello! I am a bot created to give a brief summary of tasks available on 1729.com where you can earn Bitcoin for performing certain actions in the world around us! /n If you would like to learn more about me say "!README" to get a link to my README.md file on GitHub!')
+    if msg.startswith('!Wh'):
+        await message.channel.send('Hello! I am a bot created to give a brief summary of tasks available on 1729.com where you can earn Bitcoin for performing certain actions in the world around us! If you would like to learn more about me, say "!README" to get a link to my README.md file on GitHub!')
     
     # Readme message
     if msg.startswith('!README'):
         await message.channel.send('https://github.com/ryanhartman4/1729_Discord_Bot/blob/main/README.md')
 
-    # Chatbot response 
+    # 2nd to most recent task
+    if msg.startswith('!Recent Tasks'):
+        await message.channel.send(Task1())
+        await message.channel.send(Task2())
+        await message.channel.send('https://1729.com/all/')
+
+
+    # Chatbot responder
     ''' in development phase '''
 
 # Running bot
