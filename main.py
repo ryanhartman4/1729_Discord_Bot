@@ -116,7 +116,7 @@ async def on_message(message):
     # Responds with newest 'earn' task available on 1729.com        
     if msg.startswith('!Newest Task'):
         await message.channel.send(Task1())
-        await message.channel.send('https://1729.com/all/')
+        await message.channel.send("Here's a link to 1729's official website: https://1729.com/all/")
 
     # Responds with description of bot
     if msg.startswith('!Wh'):
@@ -130,7 +130,7 @@ async def on_message(message):
     if msg.startswith('!Recent Tasks'):
         await message.channel.send(Task1())
         await message.channel.send(Task2())
-        await message.channel.send('https://1729.com/all/')
+        await message.channel.send("Here's a link to 1729's official website: https://1729.com/all/")
 
 
     # Chatbot responder
