@@ -3,6 +3,6 @@ Discord bot is meant to inform the 1729 community about competitions (and other 
 
 Bot created by: Ryan Hartman
 
-With some code shamelessly borrowed (with love) from: https://youtu.be/SPTfmiYiuok
+With some code shamelessly borrowed (with love) from: https://youtu.be/SPTfmiYiuok & https://data-flair.training/blogs/python-chatbot-project/
 
 ###Currently in development phase.
