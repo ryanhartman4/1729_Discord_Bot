@@ -7,4 +7,4 @@ Bot created by: Ryan Hartman
 
 With some code shamelessly borrowed (with love) from: https://youtu.be/SPTfmiYiuok & https://data-flair.training/blogs/python-chatbot-project/
 
-###Currently in development phase.
+### Currently in development phase.
