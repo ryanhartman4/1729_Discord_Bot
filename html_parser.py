@@ -8,15 +8,19 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
 # global variable creation 
-url = 'https://1729.com/all/'
+url = 'https://1729.com'
 
 # Parsing html into BS object
-page = urlopen(url)
-html = page.read().decode('utf-8')
-soup = BeautifulSoup(html,'html.parser')
+try:
+    page = urlopen(url)
+    html = page.read().decode('utf-8')
+    soup = BeautifulSoup(html,'html.parser')
 
-# Checking soup
-text = soup.get_text()
+    # Checking soup
+    text = soup.get_text()
+except: 
+    backupHTML = '1729HTML.txt'
+    text = open(backupHTML,'r').read()
 
 # Creating first_task
 def Task1():
