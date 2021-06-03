@@ -19,6 +19,22 @@ try:
     # Checking soup
     text = soup.get_text()
 
+    # Creating Second Task 
+    def Task2():
+        First_Earn = text.find('Earn',text.find('Earn',0)+5)
+
+        Second_Earn = text.find('Earn',First_Earn)
+
+        Second_Task = text[text.find('read',Second_Earn)+4:text.find('read',text.find('read',Second_Earn)+4)+4].strip()
+
+        Second_Task = Second_Task[Second_Task.find('Earn',0)+4:].strip()
+
+        Second_Task = Second_Task.split('   ',3)
+
+        Second_Task = Second_Task[0].strip()
+
+        return Second_Task
+
 except: 
     backupHTML = '1729HTML.txt'
     html = open(backupHTML,'r').read()
@@ -26,6 +42,30 @@ except:
 
     # Checking soup
     text = soup.get_text()
+
+    # Creating Second Task 
+    def Task2():
+        First_Earn = text.find('Earn',text.find('Earn',0)+5)
+
+        Second_Earn = text.find('Earn',First_Earn)
+
+        Second_Task = text[text.find('read',Second_Earn)+4:text.find('read',text.find('read',Second_Earn)+4)+4].strip()
+
+        Second_Task = Second_Task[Second_Task.find('Earn',0)+4:].strip()
+
+        Second_Task = Second_Task.split('   ',3)
+
+        Second_Task = Second_Task[0].strip()
+
+        Second_Task = Second_Task[::-1]
+
+        Second_Task = Second_Task[0:Second_Task.find('nraE')-1]
+
+        Second_Task = Second_Task[::-1]
+
+        Second_Task = Second_Task.strip()
+
+        return Second_Task
 
 # Creating first_task
 def Task1():
@@ -42,19 +82,3 @@ def Task1():
     first_task = first_task[0].strip()
 
     return first_task
-
-# Creating Second Task 
-def Task2():
-    First_Earn = text.find('Earn',text.find('Earn',0)+5)
-
-    Second_Earn = text.find('Earn',First_Earn)
-
-    Second_Task = text[text.find('read',Second_Earn)+4:text.find('read',text.find('read',Second_Earn)+4)+4].strip()
-
-    Second_Task = Second_Task[Second_Task.find('Earn',0)+4:].strip()
-
-    Second_Task = Second_Task.split('   ',3)
-
-    Second_Task = Second_Task[0].strip()
-
-    return Second_Task
