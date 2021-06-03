@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
 # global variable creation 
-url = 'https://1729.com'
+url = 'https://1729.com/all'
 
 # Parsing html into BS object
 try:
@@ -36,7 +36,7 @@ try:
         return Second_Task
 
 except: 
-    backupHTML = '1729HTML.txt'
+    backupHTML = 'Ancillary/1729HTML.txt'
     html = open(backupHTML,'r').read()
     soup = BeautifulSoup(html,'html.parser')
 
