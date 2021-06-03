@@ -18,9 +18,14 @@ try:
 
     # Checking soup
     text = soup.get_text()
+
 except: 
     backupHTML = '1729HTML.txt'
-    text = open(backupHTML,'r').read()
+    html = open(backupHTML,'r').read()
+    soup = BeautifulSoup(html,'html.parser')
+
+    # Checking soup
+    text = soup.get_text()
 
 # Creating first_task
 def Task1():
