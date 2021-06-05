@@ -130,3 +130,6 @@ dmypy.json
 
 # .lock
 .lock
+
+# .toml
+.toml
