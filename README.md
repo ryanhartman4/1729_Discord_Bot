@@ -3,6 +3,8 @@ This discord bot is meant to inform the 1729 community about competitions (and o
 
 Link to Discord Server: https://discord.gg/7Brt5sVJWH
 
+Link to GitHub Repo: https://github.com/ryanhartman4/1729_Discord_Bot
+
 Future Features:
   * Chatbot functionality upgrades
   * Welcome message on new user appearance in Discord lobby
