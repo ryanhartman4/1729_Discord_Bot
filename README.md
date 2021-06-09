@@ -15,7 +15,7 @@ Bot created by: Ryan Hartman
 
 With some code shamelessly borrowed (with love) from: https://youtu.be/SPTfmiYiuok & https://data-flair.training/blogs/python-chatbot-project/
 
-### Currently in development phase.
+### Deployed to Discord Server!
 
 #### Current Commands:
 !Newest Task - Populates most recent task published to 1729.com
