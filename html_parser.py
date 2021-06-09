@@ -1,5 +1,4 @@
 # importing libraries
-import re
 import os
 # installing beautifulsoup on virtual system 
 os.system('pip install --upgrade pip')

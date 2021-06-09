@@ -7,6 +7,11 @@ import random
 from replit import db
 from html_parser import Task1, Task2
 from keep_alive import keep_alive
+from Ancillary.Responder import chatbot_response 
+from Ancillary.train_chatbot import Train 
+
+# Training chatbot
+Train()
 
 # Establishing client
 client = discord.Client()
@@ -134,7 +139,9 @@ async def on_message(message):
 
 
     # Chatbot responder
-    ''' in development phase '''
+    if msg.startswith('$'):
+        msg = msg.split('$',1)[1]
+        await message.channel.send(chatbot_response(msg))
 
 # Running bot
 keep_alive()
